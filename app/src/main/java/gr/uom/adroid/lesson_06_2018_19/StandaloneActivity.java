@@ -32,11 +32,11 @@ public class StandaloneActivity extends AppCompatActivity implements View.OnClic
         Intent intent = null;
 
         if(v.getId() == R.id.btnPlayVideo){
-                intent = YouTubeStandalonePlayer.createVideoIntent(this, YoutubeActivity.YOUTUBE_API_KEY, YoutubeActivity.YOUTUBE_VIDEO);
+                intent = YouTubeStandalonePlayer.createVideoIntent(this, BuildConfig.YoutubeApiKey, YoutubeActivity.YOUTUBE_VIDEO);
         }
         else if(v.getId() == R.id.btnPlaylist){
 
-            intent = YouTubeStandalonePlayer.createPlaylistIntent(this, YoutubeActivity.YOUTUBE_API_KEY, YoutubeActivity.YOUTUBE_PLAYLIST);
+            intent = YouTubeStandalonePlayer.createPlaylistIntent(this, BuildConfig.YoutubeApiKey, YoutubeActivity.YOUTUBE_PLAYLIST);
         }
 
         if(intent != null){
